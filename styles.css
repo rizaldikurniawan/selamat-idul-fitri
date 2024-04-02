@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('background.png');
+  background-position: center;
+}
+
+.container {
+  max-width: 640px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Efek bayangan kartu */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Garis border */
+  text-align: center;
+  opacity: 0; /* Atur opasitas menjadi 0 agar elemen tersembunyi */
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s; /* Delay untuk container */
+  animation-fill-mode: forwards;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  max-width: 100%; /* Gambar menyesuaikan dengan lebar container */
+  height: auto;
+  border-radius: 2.5%;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h1,
+.family-photo,
+p,
+.family-name {
+  opacity: 0; /* Atur opasitas menjadi 0 agar elemen tersembunyi */
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  animation-name: bounceInDown;
+  animation-duration: 1s;
+  animation-delay: 1s; /* Delay untuk h1 */
+  animation-fill-mode: forwards;
+}
+
+.family-photo {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 1.5s; /* Delay untuk gambar */
+  animation-fill-mode: forwards;
+}
+
+p {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 2s; /* Delay untuk paragraf */
+  animation-fill-mode: forwards;
+}
+
+.family-name {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 2.5s; /* Delay untuk nama keluarga */
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounceInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Query untuk perangkat mobile */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  body {
+    background-position: center;
+  }
+}
